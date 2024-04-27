@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from uuid import UUID
 
 from core.category.application.category_repository import CategoryRepository
-from core.category.application.execptions import InvalidCategoryData
+from core.category.application.use_cases.execptions import InvalidCategoryData
 from core.category.domain.category import Category
 
 
