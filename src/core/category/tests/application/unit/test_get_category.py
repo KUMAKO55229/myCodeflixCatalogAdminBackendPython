@@ -11,14 +11,14 @@ from core.category.domain.category import Category
 
 class TestGetCategory:
     def test_return_found_category(self):
-        category  = Category(
+        mock_category  = Category(
             name= "Filme",
             description ="Categoria para filmes",
             is_active =True
         )
         mock_repository = create_autospec(CategoryRepository)
         
-        mock_repository.get_by_id.return_value = category
+        mock_repository.get_by_id.return_value = mock_category
         use_case = GetCategory(repository = mock_repository)
         
 
